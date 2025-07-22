@@ -4,11 +4,11 @@
 
 ### 2. Resultado en cada HTML
 
-#### [`reporte.html`](reporte.html)
+#### [`reporte.html`](https://ckodda.github.io/reporte.html)
 
-#### [`dashboard.html`](dashboard.html)
+#### [`dashboard.html`](https://ckodda.github.io/dashboard.html)
 
-#### [`error.html`](error.html)
+#### [`error.html`](https://ckodda.github.io/error.html)
 
 
 ## Visualización
