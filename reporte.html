@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reporte</title>
+    <link href="/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/css/bootstrap-datepicker.min.css">
+    <link rel="stylesheet" href="/css/custom.css">
+</head>
+
+<body>
+
+    <nav class="navbar border-bottom border-body" data-bs-theme="light">
+        <div class="container">
+            <a class="navbar-brand fw-medium" href="#">Nuevo reporte</a>
+            <button class="btn-close" type="button"></button>
+        </div>
+    </nav>
+    <div class="container p-4">
+        <div class="row gap-2">
+            <div class="col">
+                <ul class="nav nav-underline">
+                    <li class="nav-item">
+                        <a class="nav-link disabled px-2" href="#" aria-disabled="true">Reporte</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled px-2" href="#" aria-disabled="true">Listado</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link disabled px-2" href="#" aria-disabled="true">Gráfico</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link active px-2 text-primary border-4" href="#">Compartir</a>
+                    </li>
+                </ul>
+            </div>
+            <div class="col-lg-6 align-items-center">
+                <div class="d-flex justify-content-md-end gap-2">
+                    <button class="btn btn-light text-secondary bg-transparent border border-0"
+                        type="button">Cancelar</button>
+                    <button class="btn btn-primary" type="button">Guardar</button>
+                </div>
+            </div>
+        </div>
+        <div class="row pt-5">
+            <div class="col-lg-6">
+                <h3 class="">Compartir con George</h3>
+                <p class="text-secondary">Los usuarios seleccionados podrán ver el reporte desde su cuenta de Google.
+                </p>
+                <div class="row mb-3">
+                    <div class="d-sm-flex justify-content-between">
+                        <p class="text-secondary">No hay usuarios seleccionados.</p>
+                        <button class="btn btn-outline-primary fw-medium" type="button">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                class="bi bi-person-add" viewBox="0 0 16 16">
+                                <path
+                                    d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0m-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4" />
+                                <path
+                                    d="M8.256 14a4.5 4.5 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10q.39 0 .74.025c.226-.341.496-.65.804-.918Q8.844 9.002 8 9c-5 0-6 3-6 4s1 1 1 1z" />
+                            </svg>
+                            Agregar usuarios
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="col-lg-6">
+                <h3 class="">Compartir por Correo</h3>
+                <p class="text-secondary">Configura y selecciona los usuarios a recibir el reporte por correo.</p>
+                <div class="row">
+                    <form action="">
+                        <label class="form-check-label" for="switchCheckDefault">Activo*</label>
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="switchCheckDefault">
+                        </div>
+
+                        <div class="mb-3">
+                            <label for="inputAsunto" class="form-label">Asunto *</label>
+                            <input required type="text" class="form-control" id="inputAsunto"
+                                aria-describedby="inputAsunto">
+                            <div id="inputAsunto" class="form-text">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="inputDesc" class="form-label">Descripción</label>
+                            <input type="text" class="form-control" id="inputDesc" aria-describedby="inputDesc">
+                            <div id="inputDesc" class="form-text">
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col">
+                                <div class="mb-3">
+                                    <label for="disabledSelect" class="form-label">Periocidad *</label>
+                                    <select id="disabledSelect" required class="form-select">
+                                        <option selected>Semanal</option>
+                                        <option>Mensual</option>
+
+                                        <option>Diario</option>
+
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <div class="mb-3">
+
+                                    <label for="inputFv" class="form-label">Vencimiento</label>
+                                    <div class="input-group flex-nowrap">
+                                        <input placeholder="__/__/__" type="text" id="inputFv"
+                                            class="form-control border-end-0">
+                                        <span class="input-group-text bg-transparent border border-end" id="inputFv">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16"
+                                                fill="currentColor" class="bi bi-calendar" viewBox="0 0 16 16">
+                                                <path
+                                                    d="M3.5 0a.5.5 0 0 1 .5.5V1h8V.5a.5.5 0 0 1 1 0V1h1a2 2 0 0 1 2 2v11a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V3a2 2 0 0 1 2-2h1V.5a.5.5 0 0 1 .5-.5M1 4v10a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1V4z" />
+                                            </svg>
+                                        </span>
+
+                                    </div>
+
+                                    <div id="inputFv" class="form-text">
+                                    </div>
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <label for="inputDest" class="form-label">Destinatario</label>
+                            <input type="text" class="form-control" id="inputDest" aria-describedby="inputDest">
+                            <div id="inputDest" class="form-text">
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <p>Elementos visibles</p>
+                            <div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="checkDest">
+                                    <label class="form-check-label" for="checkDest">
+                                        Destinatario
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="checkGraf" checked>
+                                    <label class="form-check-label" for="checkGraf">
+                                        Gráfico
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="checkAdj" checked>
+                                    <label class="form-check-label" for="checkAdj">
+                                        Archivo Excel adjunto
+                                    </label>
+                                </div>
+                                <div class="form-check">
+                                    <input class="form-check-input" type="checkbox" value="" id="checkMet" checked>
+                                    <label class="form-check-label" for="checkMet">
+                                        Métricas
+                                    </label>
+                                </div>
+
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <div class="d-sm-flex justify-content-between">
+                                <p class="text-secondary">No hay usuarios seleccionados.</p>
+                                <button class="btn btn-outline-primary fw-medium" type="button">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                                        class="bi bi-person-add" viewBox="0 0 16 16">
+                                        <path
+                                            d="M12.5 16a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7m.5-5v1h1a.5.5 0 0 1 0 1h-1v1a.5.5 0 0 1-1 0v-1h-1a.5.5 0 0 1 0-1h1v-1a.5.5 0 0 1 1 0m-2-6a3 3 0 1 1-6 0 3 3 0 0 1 6 0M8 7a2 2 0 1 0 0-4 2 2 0 0 0 0 4" />
+                                        <path
+                                            d="M8.256 14a4.5 4.5 0 0 1-.229-1.004H3c.001-.246.154-.986.832-1.664C4.484 10.68 5.711 10 8 10q.39 0 .74.025c.226-.341.496-.65.804-.918Q8.844 9.002 8 9c-5 0-6 3-6 4s1 1 1 1z" />
+                                    </svg>
+                                    Agregar usuarios
+                                </button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="/js/jquery.min.js"></script>
+
+    <script defer src="/js/bootstrap.bundle.min.js"></script>
+    <script defer src="/js/bootstrap-datepicker.min.js"></script>
+    <script>
+        $(function () {
+            $('#inputFv').datepicker({
+                format: 'dd/mm/yyyy',
+            });
+        });
+    </script>
+</body>
+
+</html>
